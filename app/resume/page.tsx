@@ -18,7 +18,7 @@ const about = {
             fieldValue: "Somrita Banerjee",
         },
         {
-            fieldName: "E-mail",
+            fieldName: "Mail",
             fieldValue: "somritabanerjee126@gmail.com",
         },
         {
