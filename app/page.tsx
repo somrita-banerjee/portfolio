@@ -1,3 +1,4 @@
+import Photo from "@/components/Photo";
 import Social from "@/components/Social";
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
@@ -7,7 +8,7 @@ const Home = () => {
         <section className="h-full">
             <div className="container mx-auto h-full">
                 <div className="item-center flex flex-col justify-between xl:flex-row xl:pb-24 xl:pt-8">
-                    <div className="text-center xl:text-left">
+                    <div className="order-2 text-center xl:order-none xl:text-left">
                         <span className="text-xl">Software Developer</span>
                         <h1 className="h1 mb-6">
                             Hello I'm
@@ -34,7 +35,9 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                    <div>photo</div>
+                    <div className="order-1 mb-8 xl:order-none xl:mb-8">
+                        <Photo />
+                    </div>
                 </div>
             </div>
         </section>
