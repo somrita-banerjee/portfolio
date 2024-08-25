@@ -22,12 +22,12 @@ const Photo = () => {
                     className="absolute h-[298px] w-[298px] rounded-full mix-blend-lighten xl:h-[498px] xl:w-[498px]"
                 >
                     <Image
-                        src="/assets/pic.png"
+                        src="/assets/photo.png"
                         priority
                         quality={100}
                         fill
                         alt=""
-                        className="object-contain"
+                        className="rounded-full object-contain"
                     />
                 </motion.div>
                 <motion.svg
