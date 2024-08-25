@@ -1,8 +1,11 @@
 "use client";
 
 import { title } from "process";
-import { FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaNodeJs } from "react-icons/fa";
-import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
+import { FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaNodeJs, FaAndroid } from "react-icons/fa";
+import { SiTailwindcss, SiTypescript, SiKotlin } from "react-icons/si";
+import { RiNextjsFill } from "react-icons/ri";
+import { TbBrandReactNative } from "react-icons/tb";
+import { motion } from "framer-motion";
 
 const about = {
     title: "About me",
@@ -53,8 +56,59 @@ const education = {
     ],
 };
 
+const skills = {
+    title: "My skills",
+    description: "Lorem dbzhjbdfvb vdvbjvdv vxbvvvmvjxk vxb,  xvbc, ",
+    skillList: [
+        {
+            icon: <FaHtml5 />,
+            name: "html",
+        },
+        {
+            icon: <FaCss3 />,
+            name: "Css",
+        },
+        {
+            icon: <FaJs />,
+            name: "javascript",
+        },
+        {
+            icon: <FaReact />,
+            name: "react.js",
+        },
+        {
+            icon: <FaFigma />,
+            name: "figma",
+        },
+        {
+            icon: <FaNodeJs />,
+            name: "node.js",
+        },
+        {
+            icon: <SiTypescript />,
+            name: "typescript",
+        },
+        {
+            icon: <SiTailwindcss />,
+            name: "tailwind.css",
+        },
+        {
+            icon: <RiNextjsFill />,
+            name: "next.Js",
+        },
+        {
+            icon: <SiKotlin />,
+            name: "Kotlin",
+        },
+        {
+            icon: <TbBrandReactNative />,
+            name: "reactnative.dev",
+        },
+    ],
+};
+
 const Resume = () => {
-    return <div>resume page</div>;
+    return <motion.div></motion.div>;
 };
 
 export default Resume;
