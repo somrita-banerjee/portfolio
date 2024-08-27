@@ -1,3 +1,5 @@
+"use client";
+
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -104,7 +106,10 @@ const Work = () => {
                                                 />
                                             </div>
                                         </div>
-                                        <WorkerSliderBtns />
+                                        <WorkerSliderBtns
+                                            containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
+                                            btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] flex justify-center items-center transition-all"
+                                        />
                                     </SwiperSlide>
                                 );
                             })}
