@@ -10,11 +10,11 @@ const Home = () => {
             <div className="container mx-auto h-full">
                 <div className="item-center flex flex-col justify-between xl:flex-row xl:pb-24 xl:pt-8">
                     <div className="order-2 text-center xl:order-none xl:text-left">
-                        <span className="text-xl">Software Developer</span>
-                        <h1 className="h1 mb-6">
+                        <h1 className="h1">
                             Hello I'm
                             <br /> <span className="text-accent">Somrita Banerjee</span>
                         </h1>
+                        <h2 className="text-xl mb-6">Computer Science Student</h2>
                         <p className="mb-9 max-w-[500px] text-white/80">
                             I excel at crafting elegant digital experiences and I am proficient in
                             various programming languages and technologies.{" "}
@@ -24,9 +24,12 @@ const Home = () => {
                                 variant="outline"
                                 size="lg"
                                 className="flex items-center gap-2 uppercase"
+                                asChild
                             >
-                                <span>Download CV</span>
-                                <FiDownload className="text-xl" />
+                                <a href="/assets/CVSomritaBanerjee.pdf" download="CVSomritaBanerjee.pdf">
+                                    <span>Download CV</span>
+                                    <FiDownload className="text-xl" />
+                                </a>
                             </Button>
                             <div className="mb-8 xl:mb-0">
                                 <Social

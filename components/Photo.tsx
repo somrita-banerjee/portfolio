@@ -19,15 +19,15 @@ const Photo = () => {
                         opacity: 1,
                         transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" },
                     }}
-                    className="absolute h-[298px] w-[298px] rounded-full mix-blend-lighten xl:h-[498px] xl:w-[498px]"
+                    className="absolute h-[298px] w-[298px] overflow-hidden rounded-full mix-blend-lighten xl:h-[498px] xl:w-[498px]"
                 >
                     <Image
-                        src="/assets/photo.png"
+                        src="/assets/photo.jpg"
                         priority
                         quality={100}
                         fill
                         alt=""
-                        className="rounded-full object-contain"
+                        className="scale-150 rounded-full object-contain"
                     />
                 </motion.div>
                 <motion.svg

@@ -1,8 +1,17 @@
 "use client";
 
 import { title } from "process";
-import { FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaNodeJs, FaAndroid } from "react-icons/fa";
-import { SiTailwindcss, SiTypescript, SiKotlin } from "react-icons/si";
+import {
+    FaHtml5,
+    FaCss3,
+    FaJs,
+    FaReact,
+    FaFigma,
+    FaNodeJs,
+    FaAndroid,
+    FaPython,
+} from "react-icons/fa";
+import { SiTailwindcss, SiTypescript, SiKotlin, SiDjango } from "react-icons/si";
 import { RiNextjsFill } from "react-icons/ri";
 import { TbBrandReactNative } from "react-icons/tb";
 import { motion } from "framer-motion";
@@ -11,7 +20,8 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 
 const about = {
     title: "About me",
-    description: "lorem sahkf sfsfsfb dfdfbbfmre vvsfjh,gf sfsfsf",
+    description:
+        "Backend experience with Node.js, NestJS and Django.Skilled in database management with MongoDB, PostgreSQL, Developed and optimized RESTful APIs with a focus on scalability, performance, and security. Strong front-end development skills, utilizing React and Tailwind CSS. Versatile programming skills in Python, C, and C++.",
     info: [
         {
             fieldName: "Name",
@@ -19,7 +29,7 @@ const about = {
         },
         {
             fieldName: "Mail",
-            fieldValue: "somritabanerjee126@gmail.com",
+            fieldValue: "7vrveflhx@mozmail.com",
         },
         {
             fieldName: "Nationality",
@@ -38,7 +48,8 @@ const about = {
 
 const education = {
     title: "My Education",
-    description: "Lorem sfsfb dfgznms szbgzd xbzbzb vxbxzbxv czbvx,vn vbv",
+    description:
+        "I have a strong foundation in computer science and engineering, with a focus on software development and programming.",
     items: [
         {
             instituition: "Guru Nanak Institute of Technology",
@@ -60,7 +71,8 @@ const education = {
 
 const skills = {
     title: "My skills",
-    description: "Lorem dbzhjbdfvb vdvbjvdv vxbvvvmvjxk vxb,  xvbc, ",
+    description:
+        "Know Programming Languages Like TypeScript, C++, C, Kotlin, Python.Done Backend Development with Node.js, Express, NestJS and Frontend Development with React, Tailwind, NextJS. Have knowledge in Database Management like PostgreSQL, MongoDB, MySQL. have knowledge in Cloud & DevOpslike GitHub. Done other learnings in Blockchain, Android Studio ",
     skillList: [
         {
             icon: <FaHtml5 />,
@@ -110,6 +122,14 @@ const skills = {
             icon: <FaAndroid />,
             name: "Android Development",
         },
+        {
+            icon: <FaPython />,
+            name: "Python",
+        },
+        {
+            icon: <SiDjango />,
+            name: "Python with Django",
+        },
     ],
 };
 
@@ -124,11 +144,11 @@ const Resume = () => {
             className="xl: flex flex-col gap-[60px] xl:flex-row"
         >
             <div className="container mx-auto">
-                <Tabs defaultValue="experience" className="gap-[60px flex flex-col xl:flex-row">
+                <Tabs defaultValue="about" className="gap-[60px] flex flex-col xl:flex-row">
                     <TabsList className="mx-auto flex w-full max-w-[380px] flex-col gap-6 xl:mx-0">
+                        <TabsTrigger value="about">About me</TabsTrigger>
                         <TabsTrigger value="education">Education</TabsTrigger>
                         <TabsTrigger value="skills">Skills</TabsTrigger>
-                        <TabsTrigger value="about">About me</TabsTrigger>
                     </TabsList>
                     <div className="min-h-[70vh] w-full">
                         <TabsContent value="education" className="w-full">
@@ -146,7 +166,7 @@ const Resume = () => {
                                                     {item.degree}
                                                 </h3>
                                                 <div className="flex items-center gap-3">
-                                                    <span className="h-[6px] w-[6px] rounded-full bg-accent"></span>
+                                                    {/* <span className="h-[6px] w-[6px] rounded-full bg-accent"></span> */}
                                                     <p className="text-white/60">
                                                         {item.instituition}
                                                     </p>
@@ -161,9 +181,9 @@ const Resume = () => {
                             <div className="flex flex-col gap-[30px]">
                                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
                                     <h3 className="text-4xl font-bold">{skills.title}</h3>
-                                    <p className="mx-auto max-w-[600px] text-white/60 xl:mx-0">
+                                    {/* <p className="mx-auto max-w-[600px] text-white/60 xl:mx-0">
                                         {skills.description}
-                                    </p>
+                                    </p> */}
                                 </div>
                                 <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px]">
                                     {skills.skillList.map((skill, index) => {
