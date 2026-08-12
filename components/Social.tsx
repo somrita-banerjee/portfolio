@@ -1,28 +1,48 @@
 import Link from "next/link";
-import {
-    FaFacebook,
-    FaGithub,
-    FaInstagram,
-    FaLinkedinIn,
-    FaTwitter,
-    FaYoutube,
-} from "react-icons/fa";
+import { FaFacebook, FaGithub, FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
-const socials = [
-    { icon: <FaGithub />, path: "https://github.com/somrita-banerjee" },
-    { icon: <FaLinkedinIn />, path: "https://www.linkedin.com/in/somrita-banerjee/" },
-    { icon: <FaInstagram />, path: "https://www.instagram.com/s_om_rita/" },
-    { icon: <FaFacebook />, path: "https://www.facebook.com/somrita.banerjee.545/" },
-    { icon: <FaTwitter />, path: "https://x.com/SomritaBan22742" },
+interface SocialProps {
+    containerStyles?: string;
+    iconstyles?: string;
+    showAll?: boolean;
+}
+
+const primarySocials = [
+    { icon: <FaGithub />, path: "https://github.com/somrita-banerjee", name: "GitHub" },
+    {
+        icon: <FaLinkedinIn />,
+        path: "https://www.linkedin.com/in/somrita-banerjee/",
+        name: "LinkedIn",
+    },
 ];
-const Social = ({ containerStyles, iconstyles }: any) => {
+
+const secondarySocials = [
+    { icon: <FaInstagram />, path: "https://www.instagram.com/s_om_rita/", name: "Instagram" },
+    {
+        icon: <FaFacebook />,
+        path: "https://www.facebook.com/somrita.banerjee.545/",
+        name: "Facebook",
+    },
+    { icon: <FaTwitter />, path: "https://x.com/SomritaBan22742", name: "X (Twitter)" },
+];
+
+const Social = ({ containerStyles = "flex gap-6", iconstyles, showAll = false }: SocialProps) => {
+    const list = showAll ? [...primarySocials, ...secondarySocials] : primarySocials;
+
     return (
         <div className={containerStyles}>
-            {socials.map((item, index) => {
+            {list.map((item, index) => {
                 return (
-                    <Link key={index} href={item.path} className={iconstyles}>
+                    <a
+                        key={index}
+                        href={item.path}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={iconstyles}
+                        aria-label={item.name}
+                    >
                         {item.icon}
-                    </Link>
+                    </a>
                 );
             })}
         </div>

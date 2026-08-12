@@ -14,9 +14,11 @@ const Header = () => {
                 </Link>
                 <div className="hidden items-center gap-8 xl:flex">
                     <Nav />
-                    {/* <Link href="/contact">
-                        <Button>Hire me</Button>
-                    </Link> */}
+                    <Link href="/contact">
+                        <Button className="bg-accent font-bold text-primary hover:bg-accent-hover">
+                            Hire me
+                        </Button>
+                    </Link>
                 </div>
 
                 <div className="xl:hidden">

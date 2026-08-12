@@ -1,45 +1,43 @@
 "use client";
 
-import { BsArrowDownRight } from "react-icons/bs";
-import Link from "next/link";
 import { motion } from "framer-motion";
 
 const services = [
     {
         num: "01",
-        title: "Web Devolopment",
-        description: "lorem sag,md ",
-        href: "",
+        title: "Full Stack Web Development",
+        description:
+            "Building responsive, modern end-to-end web applications with Next.js, React, Node.js, and clean architecture.",
     },
     {
         num: "02",
-        title: "Frontend Devolopment",
-        description: "lorem sag,md ",
-        href: "",
+        title: "Frontend Engineering",
+        description:
+            "Designing pixel-perfect, accessible, and high-performance UI components using TypeScript, React, and Tailwind CSS.",
     },
     {
         num: "03",
-        title: "Backend Devolopment",
-        description: "lorem sag,md ",
-        href: "",
+        title: "Backend & API Development",
+        description:
+            "Architecting scalable RESTful APIs and microservices using Node.js, Express, NestJS, and Django with robust security.",
     },
     {
         num: "04",
-        title: "Android Devolopment",
-        description: "lorem sag,md ",
-        href: "",
+        title: "Mobile App Development",
+        description:
+            "Developing cross-platform and native mobile applications with React Native, Kotlin, and Android Studio.",
     },
     {
         num: "05",
-        title: "DataBase Management",
-        description: "lorem sag,md ",
-        href: "",
+        title: "Database Management",
+        description:
+            "Designing optimized relational and document databases with PostgreSQL, MongoDB, and MySQL.",
     },
     {
         num: "06",
-        title: "UI/UX Desighn",
-        description: "lorem sag,md ",
-        href: "",
+        title: "UI/UX Design",
+        description:
+            "Translating complex requirements into intuitive user journeys, wireframes, and interactive Figma prototypes.",
     },
 ];
 
@@ -59,24 +57,20 @@ const Services = () => {
                         return (
                             <div
                                 key={index}
-                                className="group flex flex-1 flex-col justify-center gap-6"
+                                className="group flex flex-1 flex-col justify-center gap-4"
                             >
                                 <div className="flex w-full items-center justify-between">
                                     <div className="text-outline group-hover:text-outline-hover text-5xl font-extrabold text-transparent transition-all duration-500">
                                         {service.num}
                                     </div>
-                                    {/* <Link
-                                        href={service.href}
-                                        className="flex h-[70px] w-[70px] items-center justify-center rounded-full bg-white transition-all duration-500 hover:-rotate-45 group-hover:bg-accent"
-                                    >
-                                        <BsArrowDownRight className="text-3xl text-primary" />
-                                    </Link> */}
                                 </div>
-                                <h2 className="text-[42px] font-bold leading-none text-white transition-all duration-500 group-hover:text-accent">
+                                <h2 className="text-[36px] font-bold leading-tight text-white transition-all duration-500 group-hover:text-accent">
                                     {service.title}
                                 </h2>
-                                {/* <p className="text-white/60">{service.description}</p> */}
-                                <div className="w-full border-b border-white/20"></div>
+                                <p className="text-sm leading-relaxed text-white/70">
+                                    {service.description}
+                                </p>
+                                <div className="w-full border-b border-white/20 pt-2"></div>
                             </div>
                         );
                     })}
