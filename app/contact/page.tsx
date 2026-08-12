@@ -50,9 +50,7 @@ const Contact = () => {
     const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
     const [statusMessage, setStatusMessage] = useState("");
 
-    const handleChange = (
-        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-    ) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
         setFormData((prev) => ({ ...prev, [name]: value }));
     };
@@ -143,7 +141,9 @@ const Contact = () => {
                             className="flex flex-col gap-6 rounded-2xl border border-white/5 bg-[#232329] p-8"
                         >
                             <div>
-                                <h3 className="text-3xl font-bold text-accent">Let&apos;s connect</h3>
+                                <h3 className="text-3xl font-bold text-accent">
+                                    Let&apos;s connect
+                                </h3>
                                 <p className="mt-2 text-sm text-white/60">
                                     Interested in discussing a full-time software engineering role,
                                     internship opportunity, or technical collaboration? Send a
