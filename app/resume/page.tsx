@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import {
     FaHtml5,
@@ -154,7 +155,7 @@ const certifications: Certification[] = [
         issuer: "Asian Institute of Technology",
         description:
             "Certificate for completing an internship at the Asian Institute of Technology.",
-        image: "assets/certificates/intern.jpeg",
+        image: "/assets/certificates/intern.jpeg",
         verified: true,
         icon: <FaUniversity className="text-4xl text-accent" />,
     },
@@ -163,7 +164,7 @@ const certifications: Certification[] = [
         issuer: "Asian Institute of Technology",
         description:
             "Certificate for acheiving the winning place in Global Innovation Project organized by the Asian Institute of Technology.",
-        image: "assets/certificates/winner.jpeg",
+        image: "/assets/certificates/winner.jpeg",
         verified: true,
         icon: <FaAward className="text-4xl text-accent" />,
     },
@@ -172,7 +173,7 @@ const certifications: Certification[] = [
         issuer: "Asian Institute of Technology",
         description:
             "Certificate for Participating in the workshop on Epicollect: Mobile mapping, Communication Skills and Campus to Corporate.",
-        image: "assets/certificates/intern.jpeg",
+        image: "/assets/certificates/epicollect.jpeg",
         verified: true,
         icon: <FaUniversity className="text-4xl text-accent" />,
     },
@@ -481,9 +482,11 @@ const Resume = () => {
                             {/* Modal Image Container */}
                             <div className="flex max-h-[65vh] flex-1 items-center justify-center overflow-auto py-4">
                                 {selectedCert.image && (
-                                    <img
+                                    <Image
                                         src={selectedCert.image}
                                         alt={selectedCert.title}
+                                        width={900}
+                                        height={650}
                                         className="max-h-[65vh] w-auto max-w-full rounded-lg object-contain shadow-lg"
                                     />
                                 )}
